@@ -1,0 +1,121 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+    <link rel="stylesheet" href="{% static 'css/table1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/table2.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="{% static 'img/logos/logo & book white.png' %}" type="image/x-icon">
+    {% block links %}
+    {% endblock %}
+    <title>GRAMOTEY</title>
+
+</head>
+
+<body>
+    <nav id="nav">
+        <div class="nav_slogan">
+            <img class="navsloganimage" src="{% static 'img/logos/слоган.png' %}" alt="">
+        </div>
+        <div class="container">
+            <div class="nav_content">
+                <div class="nav_logo">
+                    <a href="{% url 'main' %}">
+                        <img src="{% static 'img/logos/logo2 green.png' %}" alt="">
+                    </a>
+                    <img class="navsloganimageniz" src="{% static 'img/logos/слоган.png' %}" alt="">
+                </div>
+                <ul class="nav_ul">
+                    <li>
+                        <div class="dropdown" style="float:left;">
+                            <button class="dropbtn"><a href="{% url 'table1' %}">Родителям</a></button>
+                            <div class="dropdown-content" style="left:0;">
+                                <a href="/table1/#priem">Прием в школу</a>
+                                <a href="/table1/#lessons">Расписание уроков</a>
+                                <a href="/table1/#meeting">Расписание родителских собраний</a>
+                                <a href="/table1#form">Форма учащихся</a>
+                                <a href="/table1#grafic">График внесения оплаты</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown" style="float:left;">
+                            <button class="dropbtn"><a href="{% url 'table2' %}">Ученикам</a> </button>
+                            <div class="dropdown-content" style="left:0;">
+                                <a href="{% url 'table2' %}">Ученикам</a>
+                                <a href="/table2#graduatee">Выпускникам</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown" style="float:left;">
+                            <button class="dropbtn"><a href="/gallery"> Галeрея</a></button>
+                            <div class="dropdown-content" style="left:0;">
+                                <a href="{% url 'teacher' %}">Учителя</a>
+                                <a href="{% url 'student' %}">Ученики</a>
+                                <a href="{% url 'graduate' %}">Выпускники</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__item">
+                <div>
+                    <img height="150px" src="{% static 'img/logos/logo & book white.png' %}" alt="">
+                </div>
+                <div class="follow">
+                    <h2>Follow Us</h2>
+                    <div class="social__icons">
+                        <div class="social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="social">
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="footer__links">
+                    <h2>Контакты</h2>
+                    <p>г. Ош, ул.Шамшиева 1а</p>
+                    <div class="from">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="#">+996-3222-5-64-27</a>
+                    </div>
+                    <div class="from">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="#">info@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="{% static 'css/app.js' %}"></script>
+</body>
+
+</html>
