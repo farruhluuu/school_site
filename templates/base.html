@@ -25,7 +25,8 @@
 <body>
     <nav id="nav">
         <div class="nav_slogan">
-            <img class="navsloganimage" src="{% static 'img/logos/слоган.png' %}" alt="">
+            <!-- <img class="navsloganimage" src="{% static 'img/logos/слоган.png' %}" alt=""> -->
+            <p>Scientia potentia est</p>
         </div>
         <div class="container">
             <div class="nav_content">
@@ -33,7 +34,7 @@
                     <a href="{% url 'main' %}">
                         <img src="{% static 'img/logos/logo2 green.png' %}" alt="">
                     </a>
-                    <img class="navsloganimageniz" src="{% static 'img/logos/слоган.png' %}" alt="">
+                    <!-- <img class="navsloganimageniz" src="{% static 'img/logos/слоган.png' %}" alt=""> -->
                 </div>
                 <ul class="nav_ul">
                     <li>
@@ -61,9 +62,9 @@
                         <div class="dropdown" style="float:left;">
                             <button class="dropbtn"><a href="/gallery"> Галeрея</a></button>
                             <div class="dropdown-content" style="left:0;">
-                                <a href="{% url 'teacher' %}">Учителя</a>
-                                <a href="{% url 'student' %}">Ученики</a>
-                                <a href="{% url 'graduate' %}">Выпускники</a>
+                                <a href="/gallery#mentor">Учителя</a>
+                                <a href="/gallery#student">Ученики</a>
+                                <a href="/gallery#">Выпускники</a>
                             </div>
                         </div>
                     </li>

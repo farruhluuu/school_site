@@ -53,17 +53,17 @@ td {
 }
 
 .nav_slogan {
-  height: 40px;
+  height: 30px;
   width: 100%;
   background-color: #1a633bfd;
   color: #cef4f0;
-  text-align: center;
-  padding: 0px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
 }
 .navsloganimage{
 height: 40px;
-
-
 }
 .navsloganimageniz{
   height: 30px;

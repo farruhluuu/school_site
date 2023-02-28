@@ -23,21 +23,13 @@ def gallery(request):
 def table1(request):
     return render(request, 'table1.html')
 
-def teacher(request):
-    teacher = Teacher.objects.all()
-    return render(request, 'teacher.html', {'teacher':teacher})
+
 
 def table2(request):
     return render(request, 'table2.html')
 
 
-def student(request):
-    student = Student.objects.all()
-    return render(request, 'student.html', {'student':student})
 
-def graduate(request):
-    graduate = Graduate.objects.all()
-    return render(request, 'graduate.html', {'graduate':graduate})
 
 def priem(request):
     return render(request, 'table1.html')
