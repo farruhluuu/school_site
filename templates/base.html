@@ -7,11 +7,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/media.css' %}">
     <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
-    <link rel="stylesheet" href="{% static 'css/table1.css' %}">
-    <link rel="stylesheet" href="{% static 'css/table2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/for_parents.css' %}">
+    <link rel="stylesheet" href="{% static 'css/for_students_and_graduates.css' %}">
+    <link rel="stylesheet" href="{% static 'css/teachers.css' %}">
+    <link rel="stylesheet" href="{% static 'css/preloader.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,6 +26,15 @@
 </head>
 
 <body>
+    <div id="preloader">
+        <div class="inner">
+            <div class="loader"></div>
+            <div class="preloader_text">
+                <img class="preloader_logo" src="{% static 'img/logos/logo2_green.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+
     <nav id="nav">
         <div class="nav_slogan">
             <!-- <img class="navsloganimage" src="{% static 'img/logos/слоган.png' %}" alt=""> -->
@@ -32,39 +44,43 @@
             <div class="nav_content">
                 <div class="nav_logo">
                     <a href="{% url 'main' %}">
-                        <img src="{% static 'img/logos/logo2 green.png' %}" alt="">
+                        <img src="{% static 'img/logos/logo2_green.png' %}" alt="">
                     </a>
                     <!-- <img class="navsloganimageniz" src="{% static 'img/logos/слоган.png' %}" alt=""> -->
                 </div>
                 <ul class="nav_ul">
                     <li>
+                        <button class="dropbtn"><a href="{% url 'main' %}">Главная</a></button>
+                    </li>
+                    <li>
                         <div class="dropdown" style="float:left;">
-                            <button class="dropbtn"><a href="{% url 'table1' %}">Родителям</a></button>
+                            <button class="dropbtn"><a href="{% url 'for_parents' %}">Родителям</a></button>
                             <div class="dropdown-content" style="left:0;">
-                                <a href="/table1/#priem">Прием в школу</a>
-                                <a href="/table1/#lessons">Расписание уроков</a>
-                                <a href="/table1/#meeting">Расписание родителских собраний</a>
-                                <a href="/table1#form">Форма учащихся</a>
-                                <a href="/table1#grafic">График внесения оплаты</a>
+                                <a href="{% url 'admission_to_school' %}">Прием в школу</a>
+                                <a href="{% url 'lesson_Schedule' %}">Расписание уроков</a>
+                                <a href="{% url 'meeting_schedule' %}">Расписание родителских собраний</a>
+                                <a href="{% url 'uniform' %}">Форма учащихся</a>
+                                <a href="{% url 'payment_schedule' %}">График внесения оплаты</a>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="dropdown" style="float:left;">
-                            <button class="dropbtn"><a href="{% url 'table2' %}">Ученикам</a> </button>
+                            <button class="dropbtn"><a href="{% url 'for_students_and_graduates' %}">Ученикам</a>
+                            </button>
                             <div class="dropdown-content" style="left:0;">
-                                <a href="{% url 'table2' %}">Ученикам</a>
-                                <a href="/table2#graduatee">Выпускникам</a>
+                                <a href="{% url 'for_students' %}">Ученикам</a>
+                                <a href="{% url 'for_graduates' %}">Выпускникам</a>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="dropdown" style="float:left;">
-                            <button class="dropbtn"><a href="/gallery"> Галeрея</a></button>
+                            <button class="dropbtn"><a href="{% url 'gallery' %}"> Галeрея</a></button>
                             <div class="dropdown-content" style="left:0;">
-                                <a href="/gallery#mentor">Учителя</a>
-                                <a href="/gallery#student">Ученики</a>
-                                <a href="/gallery#">Выпускники</a>
+                                <a href="{% url 'mentors' %}">Учителя</a>
+                                <a href="{% url 'students' %}">Ученики</a>
+                                <a href="{% url 'graduates' %}">Выпускники</a>
                             </div>
                         </div>
                     </li>
@@ -72,7 +88,7 @@
             </div>
         </div>
     </nav>
-    
+
 
     {% block content %}
 
@@ -98,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-               
+
                 <div class="footer__links">
                     <h2>Контакты</h2>
                     <p>г. Ош, ул.Шамшиева 1а</p>
@@ -117,6 +133,13 @@
 
 
     <script src="{% static 'css/app.js' %}"></script>
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.querySelector('#preloader');
+            preloader.classList.add('fadeout');
+            setTimeout(() => preloader.remove(), 2000);
+        });
+    </script>
 </body>
 
 </html>

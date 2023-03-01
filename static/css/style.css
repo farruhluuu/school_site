@@ -88,9 +88,8 @@ height: 40px;
 }
 
 .nav_ul {
-  width: 45%;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
 }
 
@@ -223,7 +222,7 @@ a {
 .header_img {
   background-position: center;
   background-size: cover;
-  height: 550px;
+  height: 570px;
   width: 100%;
   background-image: url(/static/img/download/Panorama-pics.jpg);
   /* background-image: url ('/static/img/download/Panorama-pics.jpg'); */
@@ -359,7 +358,7 @@ h3 {
   width: 30px;
   height: 30px;
   margin-right: 5px;
-  background-color: #028984;
+  background-color: #1a633bfd;
   color: #fff;
   font-weight: 500;
   font-size: 24px;
@@ -652,7 +651,12 @@ background-color: #5555557a;
   width: 100%;
   border-radius: 6px;
 }
-
+.cardImg {
+  object-fit: cover;
+  
+  width: 100%;
+  border-radius: 6px;
+}
 .mentorCard__title {
   padding: 16px 32px 36px 32px;
 }

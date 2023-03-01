@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="tables">
+        <div id="grafic" class="title schedule__title">
+            <h4> График внесения оплаты</h4>
+        </div>
+        <table class="payment">
+            <tr>
+                <th>№</th>
+                <th>Период обучения</th>
+                <th>Дни внесения оплаты:</th>
+                <th>Место внесения оплаты:</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Сентябрь 2022</td>
+                <td>до 30.08.2022</td>
+                <td rowspan="9">Демир Банк** <br>
+                    1180000112999853
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Октябрь 2022</td>
+                <td>до 25.09.2022</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Ноябрь 2022</td>
+                <td>до 25.10.2022</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Декабрь 2022</td>
+                <td>до 25.11.2022</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Январь 2023 </td>
+                <td>до 25.12.2022</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Февраль 2023 </td>
+                <td>до 25.01.2023</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Март 2023</td>
+                <td>до 25.02.2023</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Апрель 2023</td>
+                <td>до 25.03.2023</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Май 2023</td>
+                <td>25.04.2023</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+    {% endblock %}

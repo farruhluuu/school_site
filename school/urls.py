@@ -1,25 +1,25 @@
-"""main URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.urls import path
-from school.views import main, gallery, table1, priem, table2
+from school.views import main, gallery, mentors, students, graduates
+from school.views import for_parents, admission_to_School, lesson_Schedule, meeting_schedule, uniform, payment_schedule
+from school.views import for_students_and_graduates, for_students, for_graduates
 
 urlpatterns = [
     path('', main, name='main'),
+    
+    path('for_parents/', for_parents, name='for_parents'),
+    path('admission_to_school/', admission_to_School, name='admission_to_school'),
+    path('lesson_Schedule/', lesson_Schedule, name='lesson_Schedule'),
+    path('meeting_schedule/', meeting_schedule, name='meeting_schedule'),
+    path('uniform/', uniform, name='uniform'),
+    path('payment_schedule/', payment_schedule, name='payment_schedule'),
+
+    path('for_students_and_graduates/', for_students_and_graduates, name='for_students_and_graduates'),
+    path('for_students/', for_students, name='for_students'),
+    path('for_graduates/', for_graduates, name='for_graduates'),
+
     path('gallery/', gallery, name='gallery'),
-    path('table1/', table1, name='table1'),
-    path('table2/', table2, name='table2'),
-    path('rodiyelyu/', priem, name='priem'),
+    path('mentors', mentors, name='mentors'),
+    path('students', students, name='students'),
+    path('graduates', graduates, name='graduates'),
+    
 ]
