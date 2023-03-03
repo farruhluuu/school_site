@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/media.css' %}">
     <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
-    <link rel="stylesheet" href="{% static 'css/for_parents.css' %}">
-    <link rel="stylesheet" href="{% static 'css/for_students_and_graduates.css' %}">
     <link rel="stylesheet" href="{% static 'css/teachers.css' %}">
     <link rel="stylesheet" href="{% static 'css/preloader.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -88,7 +86,38 @@
             </div>
         </div>
     </nav>
-
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a class="sidebar_a" href="{% url 'main' %}">Главная</a>
+        <div class="dropdown" style="float:left;">
+            <button class="dropbtn">Родителям</button>
+            <div class="dropdown-content" style="left:0;">
+                <a href="{% url 'admission_to_school' %}">Прием в школу</a>
+                <a href="{% url 'lesson_Schedule' %}">Расписание уроков</a>
+                <a href="{% url 'meeting_schedule' %}">Расписание родителских собраний</a>
+                <a href="{% url 'uniform' %}">Форма учащихся</a>
+                <a href="{% url 'payment_schedule' %}">График внесения оплаты</a>
+            </div>
+        </div>
+        <div class="dropdown" style="float:left;">
+            <button class="dropbtn">Ученикам</button>
+            <div class="dropdown-content" style="left:0;">
+                <a href="{% url 'for_students' %}">Ученикам</a>
+                <a href="{% url 'for_graduates' %}">Выпускникам</a>
+            </div>
+        </div>
+        <div class="dropdown" style="float:left;">
+            <button class="dropbtn">Галерея</button>
+            <div class="dropdown-content" style="left:0;">
+                <a href="{% url 'mentors' %}">Учителя</a>
+                <a href="{% url 'students' %}">Ученики</a>
+                <a href="{% url 'graduates' %}">Выпускники</a>
+            </div>
+        </div>
+    </div>
+    <div id="main" class="">
+        <button class="openbtn" onclick="openNav()">☰ GRAMOTEY</button>
+    </div>
 
     {% block content %}
 
@@ -133,13 +162,24 @@
 
 
     <script src="{% static 'css/app.js' %}"></script>
-    <script>
-        window.addEventListener('load', () => {
+    <script> window.addEventListener('load', () => {
             const preloader = document.querySelector('#preloader');
             preloader.classList.add('fadeout');
             setTimeout(() => preloader.remove(), 2000);
-        });
+        });</script>
+    <script>
+
+        const openNav = () => {
+            document.getElementById("mySidebar").style.width = "250px";
+            // document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        const closeNav = () => {
+            document.getElementById("mySidebar").style.width = "0";
+            // document.getElementById("main").style.marginLeft = "0";
+        }
     </script>
+
 </body>
 
 </html>
