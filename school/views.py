@@ -31,7 +31,7 @@ def admission_to_School(request):
     return render(request, 'for_parents/Admission_to_School.html')
 
 def lesson_Schedule(request):
-    return render(request, 'for_parents/lesson_Schedule.html')
+    return render(request, 'for_parents/lesson_schedule.html')
 
 def meeting_schedule(request):
     return render(request, 'for_parents/meeting_schedule.html')

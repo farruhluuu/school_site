@@ -162,12 +162,13 @@
 
 
     <script src="{% static 'css/app.js' %}"></script>
-    <script> window.addEventListener('load', () => {
+    
+    <script>
+        window.addEventListener('load', () => {
             const preloader = document.querySelector('#preloader');
             preloader.classList.add('fadeout');
-            setTimeout(() => preloader.remove(), 2000);
-        });</script>
-    <script>
+            setTimeout(() => preloader.remove("fadeout"), 2000);
+        })
 
         const openNav = () => {
             document.getElementById("mySidebar").style.width = "250px";
