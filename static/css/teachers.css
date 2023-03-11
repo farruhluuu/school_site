@@ -20,10 +20,10 @@
     background-color: rgba(0,0,0,0.9);
 }
 .modal-content{
-    margin: 20px auto;
+    height: 90%;
+    margin: 30px auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    
 }
 #caption{
     margin: auto;

@@ -168,7 +168,7 @@ td {
 }
 
 th {
-  background: #028984;
+  background: #1a633bfd;
   color: #fff;
 }
 
@@ -177,7 +177,7 @@ tr {
 }
 
 tr:nth-child(odd) {
-  background: #cef4f0;
+  background: #87eeb577;
 }
 
 .parents {

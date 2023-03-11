@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from school.models import Teacher, Student, Graduate, Gallery
+from school.models import Teacher, Student, Graduate, Gallery, Events
 from django.http import HttpResponseRedirect
 
 
@@ -90,5 +90,9 @@ def graduates(request):
         bool_cards = False
     range_list = [0,1,2]
     return render(request, 'gallery/graduates.html', {'graduates': graduates, 'bool_cards': bool_cards, 'range_list': range_list})
+def events(request):
+    events = Events.objects.all()
+    return render(request, 'gallery/events.html', {'events': events})
 
-
+def error_page(request):
+    return render(request, 'error.html')

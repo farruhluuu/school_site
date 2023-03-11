@@ -24,19 +24,19 @@
 </head>
 
 <body>
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div class="inner">
             <div class="loader"></div>
             <div class="preloader_text">
                 <img class="preloader_logo" src="{% static 'img/logos/logo2_green.png' %}" alt="">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <nav id="nav">
         <div class="nav_slogan">
-            <!-- <img class="navsloganimage" src="{% static 'img/logos/слоган.png' %}" alt=""> -->
-            <p>Scientia potentia est</p>
+            <!-- <img class="navsloganimage" src="{% static 'img/logos/slogan_white.png' %}" alt=""> -->
+            <!-- <p>Scientia potentia est</p> -->
         </div>
         <div class="container">
             <div class="nav_content">
@@ -52,7 +52,7 @@
                     </li>
                     <li>
                         <div class="dropdown" style="float:left;">
-                            <button class="dropbtn"><a href="{% url 'for_parents' %}">Родителям</a></button>
+                            <button class="dropbtn">Родителям</button>
                             <div class="dropdown-content" style="left:0;">
                                 <a href="{% url 'admission_to_school' %}">Прием в школу</a>
                                 <a href="{% url 'lesson_Schedule' %}">Расписание уроков</a>
@@ -64,7 +64,7 @@
                     </li>
                     <li>
                         <div class="dropdown" style="float:left;">
-                            <button class="dropbtn"><a href="{% url 'for_students_and_graduates' %}">Ученикам</a>
+                            <button class="dropbtn">Ученикам
                             </button>
                             <div class="dropdown-content" style="left:0;">
                                 <a href="{% url 'for_students' %}">Ученикам</a>
@@ -74,11 +74,12 @@
                     </li>
                     <li>
                         <div class="dropdown" style="float:left;">
-                            <button class="dropbtn"><a href="{% url 'gallery' %}"> Галeрея</a></button>
+                            <button class="dropbtn"> Галeрея</button>
                             <div class="dropdown-content" style="left:0;">
                                 <a href="{% url 'mentors' %}">Учителя</a>
                                 <a href="{% url 'students' %}">Ученики</a>
                                 <a href="{% url 'graduates' %}">Выпускники</a>
+                                <a href="{% url 'events' %}">Мероприятия</a>
                             </div>
                         </div>
                     </li>
@@ -112,6 +113,7 @@
                 <a href="{% url 'mentors' %}">Учителя</a>
                 <a href="{% url 'students' %}">Ученики</a>
                 <a href="{% url 'graduates' %}">Выпускники</a>
+                <a href="{% url 'events' %}">Мероприятия</a>
             </div>
         </div>
     </div>
@@ -129,20 +131,7 @@
                 <div>
                     <img height="150px" src="{% static 'img/logos/logo & book white.png' %}" alt="">
                 </div>
-                <div class="follow">
-                    <h2>Follow Us</h2>
-                    <div class="social__icons">
-                        <div class="social">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        </div>
-                        <div class="social">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="social">
-                            <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <div class="footer__links">
                     <h2>Контакты</h2>
@@ -162,7 +151,7 @@
 
 
     <script src="{% static 'css/app.js' %}"></script>
-    
+
     <script>
         window.addEventListener('load', () => {
             const preloader = document.querySelector('#preloader');

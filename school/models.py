@@ -26,6 +26,10 @@ class Graduate(models.Model):
     category = models.ForeignKey(to=Category, verbose_name='Должность', on_delete=models.CASCADE)
     image = models.ImageField(verbose_name='Изображение')
 
+class Events(models.Model):
+    name = models.CharField(max_length=255, verbose_name='Мероприятие')
+    image = models.ImageField(verbose_name='Изображение')
+
 class Date(models.Model):
     start = models.DateField()
     duration = models.DateField()
