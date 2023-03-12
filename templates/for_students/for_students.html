@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 {% block links %}
 <link rel="stylesheet" href="{% static 'css/for_students_and_graduates.css' %}">
 {% endblock %}
@@ -7,80 +7,55 @@
 <section class="students">
     <div class="container">
         <div class="title tables__title">
-            <h3>Ученикам для учебы</h3>
+            <h3>{% trans 'Ученикам для учебы' %}</h3>
 
         </div>
         <div class="books">
             <div class="descriptions">
-                <p> <a target="_blank" href="http://interneturok.ru">• interneturok.ru </a> — это настоящий кладезь, здесь есть видеоуроки, тренажеры и
-                    тесты по всем школьным предметам с 1 по 11 класс.</p>
-                <p> <a target="_blank" href="http://stellarium.org">• stellarium.org </a> — потрясающе красивая программа, имитирующая планетарий.
-                    Незаменимо для всех, кто интересуется астрономией, учитывая, что этот предмет вскоре появится в
-                    школьной программе.</p>
-                <p> <a target="_blank" href="http://briefly.ru">• briefly.ru</a> — это 2000 произведений школьной программы в кратком изложении.</p>
-                <p><a target="_blank" href="http://lingualeo.com">• lingualeo.com</a> — интерактивный сервис для изучения английского языка. Есть
-                    бесплатный и расширенный платный доступ (стоимость на год соотносима с 2-3 занятиями с
-                    репетитором).</p>
-                <p><a target="_blank" href="http://gostei.ru">• gostei.ru </a> — крупная онлайновая детская библиотека, которая содержит тексты
-                    программных произведений по литературе с 1 по 11 классы.</p>
-                <p><a target="_blank" href="http://gramota.ru">• gramota.ru </a> — огромный справочно-информационный портал по правилам и сложностям
-                    русского языка.</p>
-                <p><a target="_blank" href="http://learnenglishkids.britishcouncil.org">• learnenglishkids.britishcouncil.org</a>— любопытный сервис по изучению английского
-                    языка для учеников разной степени подготовки.</p>
-                <p><a target="_blank" href="http://litra.ru">• litra.ru</a> — сайт с огромным количеством биографий писателей, кратких содержаний
-                    и полных текстов литературных произведений и сотней критических статей.</p>
-                <p><a target="_blank" href="http://math-prosto.ru">• math-prosto.ru</a> — программа по математике с 1 по 11 класс, подготовка к
-                    экзаменам по предмету и готовые домашние задания.</p>
-                <p><a target="_blank" href="http://fizika.ru">• fizika.ru</a> — учебники, задачники, лабораторные работы и тесты по физике для
-                    учеников 7-9 классов и учителей физики.</p>
-                <p><a target="_blank" href="http://nuclphys.sinp.msu.ru">• nuclphys.sinp.msu.ru </a> — проект кафедры общей ядерной физики физического
-                    факультета МГУ. Лекции по физике и отдельный раздел для школьников «Популярно о науке».</p>
-                <p><a target="_blank" href="http://chem.msu.su/rus/elibrary/">• chem.msu.su/rus/elibrary/ </a> — фонд публикаций по химии, содержит учебники и
-                    практикумы по предмету, разработанные в том числе и в МГУ им. Ломоносова.</p>
-                <p><a target="_blank" href="http://orgchem.ru">• orgchem.ru</a> — интерактивный мультимедиа учебник по органической химии для
-                    школьников.</p>
-                <p><a target="_blank" href="/">— электронный учебный курс «Открытая биология» с разделением по направлениям
-                    «Ботаника», «Зоология», «Человек», «Общая биология» и «Экология».</a></p>
-                <p><a target="_blank" href="http://ebio.ru">• ebio.ru</a> — электронный учебный курс «Открытая биология» с разделением по
-                    направлениям «Ботаника», «Зоология», «Человек», «Общая биология» и «Экология».</p>
-                <p><a target="_blank" href="http://zooclub.ru">• zooclub.ru</a> — мегаэнциклопедия о животных, населяющих планету.</p>
-                <p><a target="_blank" href="http://nsportal.ru">• nsportal.ru</a> — национальный проект, в котором собраны авторские разработки и
-                    презентации педагогов по всем предметам.</p>
-                <p><a target="_blank" href="http://krugosvet.ru">• krugosvet.ru </a> — универсальная научно-популярная онлайн-энциклопедия.</p>
-                <p><a target="_blank" href="http://dic.academic.ru">• dic.academic.ru</a> — универсальный словарь и междисциплинарная энциклопедия.</p>
-                <p><a target="_blank" href="http://bibliotekar.ru">• bibliotekar.ru</a> — электронная библиотека нехудожественной литературы</p>
-                <p><a target="_blank" href="http://reshi-pishi.ru">• reshi-pishi.ru </a> — интересные квесты и задания по математике, логике, чтению и
-                    английскому языку для детей 5-10 лет.</p>
-                <p><a target="_blank" href="http://nachalka.info">• nachalka.info</a> — сборник уроков начальной школы с 1 по 4 классы по математике,
-                    русскому языку, окружающему миру и обучению грамоте. Доступ платный, но стоимость на год не
-                    превышает тысячи рублей.</p>
-                <p><a target="_blank" href="http://kvantik.com">• kvantik.com</a> — журнал, посвященный занимательным вопросам и задачам по
-                    математике, лингвистике, физике и другим наукам.</p>
-                <p><a target="_blank" href="http://childrenscience.ru">• childrenscience.ru </a> — онлайн-курсы по математике, физике, химии, биологии,
-                    технике, архитектуре, искусствоведению, лингвистике.</p>
-                <p><a target="_blank" href="http://getaclass.ru">• getaclass.ru </a> — бесплатные обучающие видео и уроки по физике и математике.</p>
-                <p><a target="_blank" href="http://native-english.ru">• native-english.ru</a> — удобный и простой сервис для изучения английского языка.
+                <p> <a target="_blank" href="http://interneturok.ru">• interneturok.ru </a>{% trans  '— это настоящий кладезь, здесь есть видеоуроки, тренажеры и тесты по всем школьным предметам с 1 по 11 класс.' %}</p>
+                <p> <a target="_blank" href="http://stellarium.org">• stellarium.org </a>{% trans  '— потрясающе красивая программа, имитирующая планетарий. Незаменимо для всех, кто интересуется астрономией, учитывая, что этот предмет вскоре появится в школьной программе.' %}</p>
+                <p> <a target="_blank" href="http://briefly.ru">• briefly.ru</a>{% trans ' — это 2000 произведений школьной программы в кратком изложении.' %}</p>
+                <p><a target="_blank" href="http://lingualeo.com">• lingualeo.com</a>{% trans ' — интерактивный сервис для изучения английского языка. Есть бесплатный и расширенный платный доступ (стоимость на год соотносима с 2-3 занятиями с репетитором).' %}</p>
+                <p><a target="_blank" href="http://gostei.ru">• gostei.ru </a>{% trans ' — крупная онлайновая детская библиотека, которая содержит тексты программных произведений по литературе с 1 по 11 классы.' %}</p>
+                <p><a target="_blank" href="http://gramota.ru">• gramota.ru </a>{% trans ' — огромный справочно-информационный портал по правилам и сложностям русского языка.' %}</p>
+                <p><a target="_blank" href="http://learnenglishkids.britishcouncil.org">• learnenglishkids.britishcouncil.org</a>{% trans '— любопытный сервис по изучению английского языка для учеников разной степени подготовки.' %}</p>
+                <p><a target="_blank" href="http://litra.ru">• litra.ru</a>{% trans ' — сайт с огромным количеством биографий писателей, кратких содержаний и полных текстов литературных произведений и сотней критических статей.' %}</p>
+                <p><a target="_blank" href="http://math-prosto.ru">• math-prosto.ru</a>{% trans ' — программа по математике с 1 по 11 класс, подготовка к экзаменам по предмету и готовые домашние задания.' %}</p>
+                <p><a target="_blank" href="http://fizika.ru">• fizika.ru</a>{% trans ' — учебники, задачники, лабораторные работы и тесты по физике для учеников 7-9 классов и учителей физики.' %}</p>
+                <p><a target="_blank" href="http://nuclphys.sinp.msu.ru">• nuclphys.sinp.msu.ru </a>{% trans '— проект кафедры общей ядерной физики физического факультета МГУ. Лекции по физике и отдельный раздел для школьников «Популярно о науке».' %}</p>
+                <p><a target="_blank" href="http://chem.msu.su/rus/elibrary/">• chem.msu.su/rus/elibrary/ </a>{% trans ' — фонд публикаций по химии, содержит учебники и практикумы по предмету, разработанные в том числе и в МГУ им. Ломоносова.' %}</p>
+                <p><a target="_blank" href="http://orgchem.ru">• orgchem.ru</a>{% trans ' — интерактивный мультимедиа учебник по органической химии для школьников.' %}</p>
+                <p><a target="_blank" href="/">{% trans '— электронный учебный курс «Открытая биология» с разделением по направлениям «Ботаника», «Зоология», «Человек», «Общая биология» и «Экология».' %}</a></p>
+                <p><a target="_blank" href="http://ebio.ru">• ebio.ru</a>{% trans ' — электронный учебный курс «Открытая биология» с разделением по направлениям «Ботаника», «Зоология», «Человек», «Общая биология» и «Экология».' %}</p>
+                <p><a target="_blank" href="http://zooclub.ru">• zooclub.ru</a>{% trans ' — мегаэнциклопедия о животных, населяющих планету.' %}</p>
+                <p><a target="_blank" href="http://nsportal.ru">• nsportal.ru</a>{% trans ' — национальный проект, в котором собраны авторские разработки и презентации педагогов по всем предметам.' %}</p>
+                <p><a target="_blank" href="http://krugosvet.ru">• krugosvet.ru </a>{% trans ' — универсальная научно-популярная онлайн-энциклопедия.' %}</p>
+                <p><a target="_blank" href="http://dic.academic.ru">• dic.academic.ru</a>{% trans ' — универсальный словарь и междисциплинарная энциклопедия.' %}</p>
+                <p><a target="_blank" href="http://bibliotekar.ru">• bibliotekar.ru</a>{% trans ' — электронная библиотека нехудожественной литературы' %}</p>
+                <p><a target="_blank" href="http://reshi-pishi.ru">• reshi-pishi.ru </a>{% trans ' — интересные квесты и задания по математике, логике, чтению и английскому языку для детей 5-10 лет.' %}</p>
+                <p><a target="_blank" href="http://nachalka.info">• nachalka.info</a>{% trans ' — сборник уроков начальной школы с 1 по 4 классы по математике, русскому языку, окружающему миру и обучению грамоте. Доступ платный, но стоимость на год не превышает тысячи рублей.' %}</p>
+                <p><a target="_blank" href="http://kvantik.com">• kvantik.com</a>{% trans ' — журнал, посвященный занимательным вопросам и задачам по математике, лингвистике, физике и другим наукам.' %}</p>
+                <p><a target="_blank" href="http://childrenscience.ru">• childrenscience.ru </a>{% trans ' — онлайн-курсы по математике, физике, химии, биологии, технике, архитектуре, искусствоведению, лингвистике.' %}</p>
+                <p><a target="_blank" href="http://getaclass.ru">• getaclass.ru </a>{% trans ' — бесплатные обучающие видео и уроки по физике и математике.' %}</p>
+                <p><a target="_blank" href="http://native-english.ru">• native-english.ru</a> {% trans '— удобный и простой сервис для изучения английского языка.' %}
                 </p>
-                <p><a target="_blank" href="http://math24.biz">• math24.biz</a> — сервис по математике для учеников 5-11 классов. Подробный разбор
-                    тем и пошаговое решение задач.</p>
-                <p><a target="_blank" href="http://translate.ru">• translate.ru </a> — онлайн-переводчик с десятка языков, а также грамматика
-                    английского, немецкого и французского языков.</p>
-                <p><a target="_blank" href="http://www.hemi.nsu.ru">• http://www.hemi.nsu.ru</a> - Основы химии: образовательный сайт для школьников и
-                    студентов</p>
-                <p><a target="_blank" href="https://chemequations.com/ru">• https://chemequations.com/ru</a> - Калькулятор для химиков (химические реакции)
+                <p><a target="_blank" href="http://math24.biz">• math24.biz</a>{% trans ' — сервис по математике для учеников 5-11 классов. Подробный разбор тем и пошаговое решение задач.' %}</p>
+                <p><a target="_blank" href="http://translate.ru">• translate.ru </a>{% trans ' — онлайн-переводчик с десятка языков, а также грамматика английского, немецкого и французского языков.' %}</p>
+                <p><a target="_blank" href="http://www.hemi.nsu.ru">• http://www.hemi.nsu.ru</a>{% trans  '- Основы химии: образовательный сайт для школьников и студентов' %}</p>
+                <p><a target="_blank" href="https://chemequations.com/ru">• https://chemequations.com/ru</a>{% trans ' - Калькулятор для химиков (химические реакции)' %}
                 </p>
-                <p><a target="_blank" href="http://www.chem100.ru/elem.php">http://www.chem100.ru/elem.php</a> - Химические элементы </p>
-                <p><a target="_blank" href="http://all-met.narod.ru">• http://all-met.narod.ru</a> - Занимательная химия: все о металлах </p>
-                <p><a target="_blank" href="http://priroda.inc.ru/himij/himij.html">• http://priroda.inc.ru/himij/himij.html </a> - История открытий химических элементов
+                <p><a target="_blank" href="http://www.chem100.ru/elem.php">http://www.chem100.ru/elem.php</a>{% trans ' - Химические элементы'  %}</p>
+                <p><a target="_blank" href="http://all-met.narod.ru">• http://all-met.narod.ru</a>{% trans ' - Занимательная химия: все о металлах ' %}</p>
+                <p><a target="_blank" href="http://priroda.inc.ru/himij/himij.html">• http://priroda.inc.ru/himij/himij.html </a>{% trans ' - История открытий химических элементов' %}
                 </p>
 
                 <p>
                     <a target="_blank" href="http://www.virtulab.net/index.php?option=com_content&view=section&layout=blog&id=7&Itemid=102">•
                         http://www.virtulab.net/index.php
-                    </a> - Виртуальная лаборатория
+                    </a>{% trans ' - Виртуальная лаборатория' %}
                 </p>
-                <p id="graduatee"><a target="_blank" href="http://biology-online.ru/">• http://biology-online.ru/</a> - Современные уроки биологии </p>
-                <p><a target="_blank" href="http://www.bioword.narod.ru/">• http://www.bioword.narod.ru/</a> - Словарь биологических терминов </p>
+                <p id="graduatee"><a target="_blank" href="http://biology-online.ru/">• http://biology-online.ru/</a>{% trans ' - Современные уроки биологии'  %}</p>
+                <p><a target="_blank" href="http://www.bioword.narod.ru/">• http://www.bioword.narod.ru/</a>{% trans ' - Словарь биологических терминов' %}</p>
             </div>
         </div>
     </div>

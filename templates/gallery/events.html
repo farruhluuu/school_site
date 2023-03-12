@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 {% block content %}
 
 <section id="events">
     <div class="events">
         <div class="container">
             <div class="title events__title">
-                <h3 style="color: black;">Недавние мероприятия</h3>
+                <h3 style="color: black;">{% trans 'Недавние мероприятия' %}</h3>
             </div>
             <div class="events__cards">
                 {% for i in events %}

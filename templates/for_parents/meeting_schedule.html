@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 {% block links %}
 <link rel="stylesheet" href="{% static 'css/for_parents.css' %}">
 {% endblock %}
@@ -7,20 +7,19 @@
 <div class="container">
     <div class="tables">
         <div class="title schedule__title">
-            <h4>Расписание родительских собраний</h4>
+            <h4>{% trans 'Расписание родительских собраний' %}</h4>
         </div>
         <table class="meetings">
             <tr>
                 <th>№</th>
-                <th>Дата</th>
-                <th>Время</th>
+                <th>{% trans 'Дата' %}</th>
+                <th>{% trans 'Время' %}</th>
             </tr>
             <tr>
                 <td>1</td>
                 <td>27.08.22</td>
-                <td rowspan="5">«А» класс – 18.00 <br>
-                    «Б» класс – 19.00
-                    </th>
+                <td rowspan="5">{% trans '«А» класс – 18.00' %}<br>
+                    {% trans '«Б» класс – 19.00' %}</th>
             </tr>
             <tr>
                 <td>2</td>

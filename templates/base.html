@@ -1,4 +1,4 @@
-{% load static %}
+{% load static i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,38 +48,62 @@
                 </div>
                 <ul class="nav_ul">
                     <li>
-                        <button class="dropbtn"><a href="{% url 'main' %}">Главная</a></button>
+                        <button class="dropbtn"><a href="{% url 'main' %}">{% trans 'Главная' %}</a></button>
                     </li>
                     <li>
                         <div class="dropdown" style="float:left;">
-                            <button class="dropbtn">Родителям</button>
+                            <button class="dropbtn">{% trans 'Родителям' %}</button>
                             <div class="dropdown-content" style="left:0;">
-                                <a href="{% url 'admission_to_school' %}">Прием в школу</a>
-                                <a href="{% url 'lesson_Schedule' %}">Расписание уроков</a>
-                                <a href="{% url 'meeting_schedule' %}">Расписание родителских собраний</a>
-                                <a href="{% url 'uniform' %}">Форма учащихся</a>
-                                <a href="{% url 'payment_schedule' %}">График внесения оплаты</a>
+                                <a href="{% url 'admission_to_school' %}">{% trans 'Прием в школу' %}</a>
+                                <a href="{% url 'lesson_Schedule' %}">{% trans 'Расписание уроков' %}</a>
+                                <a href="{% url 'meeting_schedule' %}">{% trans 'Расписание родителских собраний' %}</a>
+                                <a href="{% url 'uniform' %}">{% trans 'Форма учащихся' %}</a>
+                                <a href="{% url 'payment_schedule' %}">{% trans 'График внесения оплаты' %}</a>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="dropdown" style="float:left;">
-                            <button class="dropbtn">Ученикам
+                            <button class="dropbtn">{% trans 'Ученикам' %}
                             </button>
                             <div class="dropdown-content" style="left:0;">
-                                <a href="{% url 'for_students' %}">Ученикам</a>
-                                <a href="{% url 'for_graduates' %}">Выпускникам</a>
+                                <a href="{% url 'for_students' %}">{% trans 'Ученикам' %}</a>
+                                <a href="{% url 'for_graduates' %}">{% trans 'Выпускникам' %}</a>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="dropdown" style="float:left;">
-                            <button class="dropbtn"> Галeрея</button>
+                            <button class="dropbtn">{% trans  'Галeрея' %}</button>
                             <div class="dropdown-content" style="left:0;">
-                                <a href="{% url 'mentors' %}">Учителя</a>
-                                <a href="{% url 'students' %}">Ученики</a>
-                                <a href="{% url 'graduates' %}">Выпускники</a>
-                                <a href="{% url 'events' %}">Мероприятия</a>
+                                <a href="{% url 'mentors' %}">{% trans 'Учителя' %}</a>
+                                <a href="{% url 'students' %}">{% trans 'Ученики' %}</a>
+                                <a href="{% url 'graduates' %}">{% trans 'Выпускники' %}</a>
+                                <a href="{% url 'events' %}">{% trans 'Мероприятия' %}</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <form action="{% url 'set_language' %}" method="post">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}">
+                            <select name="language">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{language.code}}"{% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                                        {{language.name_local}} ({{language.code}})
+                                    </option>
+                                    {% endfor %}
+                            </select>
+                            <input type="submit" value="Go">
+                        </form>
+                        <div class="dropdown" style="float:left;">
+                            <button class="dropbtn">{% trans  'Галeрея' %}</button>
+                            <div class="dropdown-content" style="left:0;">
+                                <a href="{% url 'graduates' %}">{% trans 'Выпускники' %}</a>
+                                <a href="{% url 'events' %}">{% trans 'Мероприятия' %}</a>
                             </div>
                         </div>
                     </li>
@@ -89,31 +113,31 @@
     </nav>
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a class="sidebar_a" href="{% url 'main' %}">Главная</a>
+        <a class="sidebar_a" href="{% url 'main' %}">{% trans 'Главная' %}</a>
         <div class="dropdown" style="float:left;">
-            <button class="dropbtn">Родителям</button>
+            <button class="dropbtn">'Родителям'</button>
             <div class="dropdown-content" style="left:0;">
-                <a href="{% url 'admission_to_school' %}">Прием в школу</a>
-                <a href="{% url 'lesson_Schedule' %}">Расписание уроков</a>
-                <a href="{% url 'meeting_schedule' %}">Расписание родителских собраний</a>
-                <a href="{% url 'uniform' %}">Форма учащихся</a>
-                <a href="{% url 'payment_schedule' %}">График внесения оплаты</a>
+                <a href="{% url 'admission_to_school' %}">{% trans 'Прием в школу' %}</a>
+                <a href="{% url 'lesson_Schedule' %}">{% trans 'Расписание уроков' %}</a>
+                <a href="{% url 'meeting_schedule' %}">{% trans 'Расписание родителских собраний' %}</a>
+                <a href="{% url 'uniform' %}">{% trans 'Форма учащихся' %}</a>
+                <a href="{% url 'payment_schedule' %}">{% trans 'График внесения оплаты' %}</a>
             </div>
         </div>
         <div class="dropdown" style="float:left;">
-            <button class="dropbtn">Ученикам</button>
+            <button class="dropbtn">{% trans 'Ученикам' %}</button>
             <div class="dropdown-content" style="left:0;">
-                <a href="{% url 'for_students' %}">Ученикам</a>
-                <a href="{% url 'for_graduates' %}">Выпускникам</a>
+                <a href="{% url 'for_students' %}">{% trans 'Ученикам' %}</a>
+                <a href="{% url 'for_graduates' %}">{% trans 'Выпускникам' %}</a>
             </div>
         </div>
         <div class="dropdown" style="float:left;">
-            <button class="dropbtn">Галерея</button>
+            <button class="dropbtn">{% trans 'Галерея' %}</button>
             <div class="dropdown-content" style="left:0;">
-                <a href="{% url 'mentors' %}">Учителя</a>
-                <a href="{% url 'students' %}">Ученики</a>
-                <a href="{% url 'graduates' %}">Выпускники</a>
-                <a href="{% url 'events' %}">Мероприятия</a>
+                <a href="{% url 'mentors' %}">{% trans 'Учителя' %}</a>
+                <a href="{% url 'students' %}">{% trans 'Ученики' %}</a>
+                <a href="{% url 'graduates' %}">{% trans 'Выпускники' %}</a>
+                <a href="{% url 'events' %}">{% trans 'Мероприятия' %}</a>
             </div>
         </div>
     </div>
@@ -134,8 +158,8 @@
                 
 
                 <div class="footer__links">
-                    <h2>Контакты</h2>
-                    <p>г. Ош, ул.Шамшиева 1а</p>
+                    <h2>{% trans 'Контакты' %}</h2>
+                    <p>{% trans 'г. Ош, ул.Шамшиева 1а' %}</p>
                     <div class="from">
                         <i class="fa-solid fa-phone"></i>
                         <a href="#">+996-3222-5-64-27</a>
