@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation', 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'modeltranslation', 
 
     # apps
     'school',
@@ -125,13 +125,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-_ = lambda s:s
+_ = lambda s: s
 
 LANGUAGE_CODE = 'ru'
 
 LANGUAGES = (
+    ('ru', _('Russian')), 
     ('ky', _('Kyrgyz')),
-    ('ru', _('Russian')),
 )
 
 LOCALE_PATHS = (
