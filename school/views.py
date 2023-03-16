@@ -84,12 +84,8 @@ def students(request):
 
 def graduates(request):
     graduates = Graduate.objects.all()
-    if graduates.exists():
-        bool_cards = True
-    else:
-        bool_cards = False
-    range_list = [0,1,2]
-    return render(request, 'gallery/graduates.html', {'graduates': graduates, 'bool_cards': bool_cards, 'range_list': range_list})
+    
+    return render(request, 'gallery/graduates.html', {'graduates': graduates})
 def events(request):
     events = Events.objects.all()
     return render(request, 'gallery/events.html', {'events': events})

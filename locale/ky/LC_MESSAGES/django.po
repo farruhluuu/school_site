@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-15 14:26+0600\n"
+"POT-Creation-Date: 2023-03-16 13:56+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,77 +63,67 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
-#: templates/base.html:41 templates/base.html:99
+#: templates/base.html:42
 msgid "Главная"
 msgstr "Башкы"
 
-#: templates/base.html:45 templates/base.html:101
+#: templates/base.html:46
 msgid "Родителям"
 msgstr "Ата-энелерге"
 
-#: templates/base.html:47 templates/base.html:103
-#: templates/for_parents/Admission_to_School.html:12
+#: templates/base.html:48 templates/for_parents/Admission_to_School.html:12
 msgid "Прием в школу"
 msgstr "Мектепке кабыл алуу"
 
-#: templates/base.html:48 templates/base.html:104
-#: templates/for_parents/lesson_schedule.html:10
+#: templates/base.html:49 templates/for_parents/lesson_schedule.html:10
 msgid "Расписание уроков"
 msgstr "Сабактын графиги"
 
-#: templates/base.html:49 templates/base.html:105
+#: templates/base.html:50
 msgid "Расписание родителских собраний"
 msgstr "Сабактын графиги"
 
-#: templates/base.html:50 templates/base.html:106
-#: templates/for_parents/uniform.html:10
+#: templates/base.html:51 templates/for_parents/uniform.html:10
 msgid "Форма учащихся"
 msgstr "Окуучулардын формасы"
 
-#: templates/base.html:51 templates/base.html:107
-#: templates/for_parents/payment_schedule.html:10
+#: templates/base.html:52 templates/for_parents/payment_schedule.html:10
 msgid "График внесения оплаты"
 msgstr "Төлөө графиги"
 
-#: templates/base.html:57 templates/base.html:60 templates/base.html:111
-#: templates/base.html:113
+#: templates/base.html:58 templates/base.html:61
 msgid "Ученикам"
 msgstr "Окуучуларга"
 
-#: templates/base.html:61 templates/base.html:114
-#: templates/for_students/for_graduates.html:11
+#: templates/base.html:62 templates/for_students/for_graduates.html:11
 msgid "Выпускникам"
 msgstr "Бүтүрүүчүлөргө"
 
-#: templates/base.html:67
+#: templates/base.html:68
 msgid "Галeрея"
 msgstr "Галeрея"
 
-#: templates/base.html:69 templates/base.html:120
+#: templates/base.html:70
 msgid "Учителя"
 msgstr "Мугалимдер"
 
-#: templates/base.html:70 templates/base.html:121
+#: templates/base.html:71
 msgid "Ученики"
 msgstr "Окуучулар"
 
-#: templates/base.html:71 templates/base.html:122
+#: templates/base.html:72
 msgid "Выпускники"
 msgstr "Бүтүрүүчүлөр"
 
-#: templates/base.html:72 templates/base.html:123
+#: templates/base.html:73
 msgid "Мероприятия"
 msgstr "Иш-чаралар"
 
-#: templates/base.html:118
-msgid "Галерея"
-msgstr "Галерея"
-
-#: templates/base.html:160
+#: templates/base.html:117
 msgid "Контакты"
 msgstr "Байланыш үчүн"
 
-#: templates/base.html:161
+#: templates/base.html:118
 msgid "г. Ош, ул.Шамшиева 1а"
 msgstr "Ош ш., Шамшиев көч., 1а"
 
@@ -647,6 +637,10 @@ msgstr "- Биологиялык терминдердин сөздүгү"
 msgid "Недавние мероприятия"
 msgstr "Акыркы иш-чаралар"
 
+#: templates/gallery/graduates.html:9
+msgid "Знакомьтесь, наши Выпускники"
+msgstr "Биздин бүтүрүүчүлөр менен таанышыңыз"
+
 #: templates/gallery/students.html:9
 msgid "Знакомьтесь, наши Ученики"
 msgstr "Биздин окуучулар менен таанышыңыз"
@@ -869,3 +863,6 @@ msgstr ""
 #: templates/main.html:135
 msgid "Наши Лицензии"
 msgstr "Биздин Лицензиялар"
+
+#~ msgid "Галерея"
+#~ msgstr "Галерея"
