@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block content %}
+
+<section id="mentor">
+    <div class="mentor">
+        <div class="container">
+            <div class="title mentor__title">
+                <h3 style="color: black;">{% trans 'Знакомьтесь, наши Выпускники' %}</h3>
+            </div>
+            <div class="mentor__cards">
+                {% for i in graduates %}
+                <div class="mentor__card">
+                    <img class="mentorImg" id="myimg" src="{{i.image.url}}" alt="" style="height: 300px;"
+                        onclick="openModal(this);" />
+                    <div id="myModal" class="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img src='{{i.image.url}}' alt='' class="modal-content" id="img01">
+                        <div id="caption"></div>
+                    </div>
+                    <div class="mentorCard__title">
+                        <h6>{{i.name}} <span>{{i.category}}</span></h6>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'css/modal.js' %}"></script>
+{% endblock %}

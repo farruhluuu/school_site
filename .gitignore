@@ -5,7 +5,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 gallary
-gallery
 media
 db.sqlite3
 # C extensions
