@@ -10,6 +10,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -46,7 +50,7 @@ td {
 
 #nav {
   width: 100%;
-  background-color: #ffffffcc;
+  background-color: #fff;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -69,13 +73,11 @@ td {
 
 .navsloganimageniz {
   height: 30px;
-
-
 }
 
 .nav_content {
-  height: 60px;
   width: 100%;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,7 +86,6 @@ td {
 .nav_logo {
   display: flex;
   align-items: center;
-  gap: 30px;
 }
 
 .nav_logo>a>img {
@@ -99,17 +100,48 @@ td {
 }
 
 a {
-  color: #222222;
+  color: #222;
   cursor: pointer;
 }
 
 .dropbtn {
-  background-color: #ffffff02;
-  color: #222222;
-  padding: 24px;
+  padding: 15px 10px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+}
+
+button {
+  background: none;
+}
+
+.changeLanguage form input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  font-size: inherit;
+  padding: 0.25em 0.5em;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  box-shadow: none;
+  cursor: text;
+}
+
+.changeLanguage form select {
+  font-size: inherit;
+  padding: 0.25em 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  background-color: #fff;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .dropdown {
@@ -121,8 +153,10 @@ a {
   border-radius: 5px;
   display: none;
   position: absolute;
-  right: 0;
-  background-color: #ffffffde;
+  top: 45px;
+  left: 0;
+  background-color: #fff;
+  color: #fff;
   min-width: 160px;
   box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 99;
@@ -136,7 +170,7 @@ a {
 }
 
 .dropdown-content a:hover {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .dropdown:hover .dropdown-content {
@@ -153,25 +187,26 @@ a {
   z-index: 4;
   top: 0;
   left: 0;
-  background-color: #ffffffcc;
+  background-color: #fff;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar button:hover {
   color: #222222;
 }
-
-.sidebar .closebtn {
+.closebtn {
   position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  top: 35px;
+  right: 20px;
+  font-size: 24px;
   z-index: 4;
-
+  opacity: 0;
 }
+
 
 .openbtn {
   font-size: 20px;
@@ -184,18 +219,20 @@ a {
   position: fixed;
   z-index: 3;
   display: none;
-  border-radius: 0 0 5px 0;
-
 }
 
 .openbtn:hover {
-  background-color: #1f9e06;
+  background-color: #1d7043;
 }
 
 #main {
+  width: 100%;
+  display: flex;
+  align-items: center;
   transition: margin-left .5s;
   padding: 0px;
   z-index: 4;
+  background-color: #1a633bfd;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -807,7 +844,7 @@ h3 {
 }
 
 .licence_div {
-  width: 100%;  
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
 }

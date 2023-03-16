@@ -23,6 +23,9 @@ body{
     align-items: center;
     gap: 5px;
 }
+button {
+    background: none;
+  }
 
 #preloader .loader {
     display: inline-block;
